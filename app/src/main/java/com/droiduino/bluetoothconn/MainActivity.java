@@ -72,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
             createConnectThread.start();
         }
 
-        String cmdText = null;
-        cmdText = "1";
-        connectedThread.write(cmdText);
 
         /*
         Second most important piece of Code. GUI Handler
@@ -113,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                 // Move to adapter list
                 Intent intent = new Intent(MainActivity.this, SelectDeviceActivity.class);
                 startActivity(intent);
+                String cmdText = null;
+                cmdText = "1";
+                connectedThread.write(cmdText);
             }
         });
         /*
